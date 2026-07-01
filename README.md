@@ -1,5 +1,10 @@
 # Campaign-Guard
 
+[![CI](https://github.com/atharvadevne123/Campaign-Guard/actions/workflows/ci.yml/badge.svg)](https://github.com/atharvadevne123/Campaign-Guard/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Palantir Foundry](https://img.shields.io/badge/Palantir-Foundry-orange)](https://www.palantir.com/platforms/foundry/)
+
 > ML-powered marketing campaign ROI prediction, budget attribution, and channel optimization API — production-ready with Palantir Foundry integration.
 
 ## Overview
@@ -46,6 +51,8 @@ Campaign-Guard scores incoming marketing campaigns in real time, returning a pre
 | `POST` | `/predict` | Score a single campaign |
 | `POST` | `/predict/batch` | Score up to 100 campaigns |
 | `POST` | `/attribution` | Shapley channel attribution |
+| `GET` | `/benchmark/<industry>` | Industry ROI benchmarks (CTR, CVR, ROAS, CPA) |
+| `POST` | `/channel-mix` | Suggest optimal budget allocation by objective |
 | `GET` | `/health` | Liveness probe |
 | `GET` | `/metrics` | Prometheus metrics |
 | `GET` | `/model/info` | Model version and feature metadata |
